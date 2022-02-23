@@ -18,6 +18,17 @@ public class Day {
             }
         }
     }
+    public void DailyReport(String userInputDay) {
+        String[] dayOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+        int[] temp = {10, 30, 50, 70, 80, 90};
+        String[] description = {"Snowy", "Cold", "Overcast", "Rainy", "Sunny", "Hot"};
+
+        for (int i = 0; i < temp.length; i++) {
+
+                buildFullReport.add(new Report(userInputDay, temp[i], description[i]));
+            }
+        }
+
 
     public void printReport() {
         for (int n = 0; n < buildFullReport.size(); n++) {
