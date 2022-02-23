@@ -1,11 +1,19 @@
 package com.company;
 
-import java.util.List;
-
 public class Report {
     public String dayOfWeek;
     public int temp;
     public String description;
+
+    public String getDayOfWeek() {
+        return dayOfWeek;
+    }
+    public int getTemp(){
+        return temp;
+    }
+    public String getDescription(){
+        return description;
+    }
 
     public Report(String dayOfWeek, int temp, String description) {
         this.dayOfWeek = dayOfWeek;
@@ -13,13 +21,8 @@ public class Report {
         this.description = description;
 
     }
-
     public String toString() {
         return " " + temp + " " + description;
     }
-
-    //for (int s = 0; s < suit.size(); s++) {
-//        for (int r = 0; r < rank.size(); r++) {
-//            completeDeck.add(new Card(suit.get(s), rank.get(r), value.get(r)));
 }
 
