@@ -9,12 +9,27 @@ public class Day {
 
     public void buildReport() {
         String[] dayOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+        int[] temp = {10, 30, 50, 70, 80, 90};
+        String[] description = {"Snowy", "Cold", "Overcast", "Rainy", "Sunny", "Hot"};
+
+        for (int i = 0; i < dayOfWeek.length; i++) {
+            for (int j = 0; j < temp.length; j++) {
+                buildFullReport.add(new Report(dayOfWeek[i], temp[j], description[j]));
+            }
+        }
     }
 
-
-
-    public void weatherReportOption(){
-        for (int i = 0;)
+    public void printReport() {
+        for (int n = 0; n < buildFullReport.size(); n++) {
+            Report myReport = buildFullReport.get(n);
+            String dayOfWeek = myReport.getDayOfWeek();
+            int temp = myReport.getTemp();
+            String description = myReport.getDescription();
+            System.out.println(dayOfWeek + " " + temp + " " + description);
+        }
     }
-
 }
+
+
+
+

@@ -5,6 +5,12 @@ public class Report {
     public int temp;
     public String description;
 
+    public Report(String dayOfWeek, int temp, String description) {
+        this.dayOfWeek = dayOfWeek;
+        this.temp = temp;
+        this.description = description;
+
+    }
     public String getDayOfWeek() {
         return dayOfWeek;
     }
@@ -15,12 +21,7 @@ public class Report {
         return description;
     }
 
-    public Report(String dayOfWeek, int temp, String description) {
-        this.dayOfWeek = dayOfWeek;
-        this.temp = temp;
-        this.description = description;
 
-    }
     public String toString() {
         return " " + temp + " " + description;
     }
